@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./Home/Home";
 import Gaon from "./Gaon intro/Gaon";
 import EUM from "./EUM intro/EUM";
+import ON from "./다시ON/ON";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "./lib/axios";
 import { useEffect, useState } from "react";
@@ -47,6 +48,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Gaon" element={<Gaon />} />
             <Route path="/EUM" element={<EUM />} />
+            <Route path="/ON" element={<ON />} />
           </Routes>
         </BrowserRouter>
       </Mobile>
@@ -58,6 +60,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Gaon" element={<Gaon />} />
             <Route path="/EUM" element={<EUM />} />
+            <Route path="/ON" element={<ON />} />
           </Routes>
         </BrowserRouter>
       </PC>

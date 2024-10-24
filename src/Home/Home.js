@@ -7,7 +7,7 @@ import backimg from "../image/back.webp";
 function Home() {
   const navigate = useNavigate();
   function moveMenu1() {
-    navigate("/1");
+    navigate("/ON");
   }
   function moveMenu2() {
     navigate("/Gaon");
