@@ -5,6 +5,23 @@ import EUM from "./EUM intro/EUM";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "./lib/axios";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+
+export const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({
+    query: "(max-width:768px)",
+  });
+
+  return <>{isMobile && children}</>;
+};
+
+export const PC = ({ children }) => {
+  const isPc = useMediaQuery({
+    query: "(min-width:769px)",
+  });
+
+  return <>{isPc && children}</>;
+};
 
 function App() {
   const [hello, setHello] = useState("");
@@ -20,16 +37,30 @@ function App() {
         console.error("Error fetching data:", error);
       });
   }, []);
+
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Gaon" element={<Gaon />} />
-          <Route path="/EUM" element={<EUM />} />
-        </Routes>
-      </BrowserRouter>
-      <div>백엔드 데이터 : {hello}</div>
+      <Mobile>
+        <p>모바일</p>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Gaon" element={<Gaon />} />
+            <Route path="/EUM" element={<EUM />} />
+          </Routes>
+        </BrowserRouter>
+      </Mobile>
+
+      <PC>
+        <p>PC</p>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Gaon" element={<Gaon />} />
+            <Route path="/EUM" element={<EUM />} />
+          </Routes>
+        </BrowserRouter>
+      </PC>
     </>
   );
 }
