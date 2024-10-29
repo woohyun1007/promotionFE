@@ -12,8 +12,8 @@ import swal from 'sweetalert';
 import './ON.css';
 
 // 이미지 파일 불러오기 (src 폴더 내 img 폴더에 위치시켜야 합니다)
-import slogan from '../image/2024 가온제 우리가 바라던~.png';
-import logo from '../image/2024 가온제 로고+문구_대지 1.png';
+import slogan from '../image/2024 가온제 우리가 바라던~.png';
+import logo from '../image/2024 가온제 로고+문구_대지 1.png';
 import backgroundImage from '../image/무제-1_대지.png'; // 배경 이미지 가져오기
 
 function ON() {

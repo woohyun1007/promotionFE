@@ -50,6 +50,7 @@ function App() {
             <Route path="/EUM" element={<EUM />} />
             <Route path="/ON" element={<ON />} />
           </Routes>
+          <p>백:{hello}</p>
         </BrowserRouter>
       </Mobile>
 
@@ -62,6 +63,7 @@ function App() {
             <Route path="/EUM" element={<EUM />} />
             <Route path="/ON" element={<ON />} />
           </Routes>
+          <p>백:{hello}</p>
         </BrowserRouter>
       </PC>
     </>
