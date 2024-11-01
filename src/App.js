@@ -8,6 +8,7 @@ import axios from "./lib/axios";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
+
 export const Mobile = ({ children }) => {
   const isMobile = useMediaQuery({
     query: "(max-width:768px)",
@@ -42,7 +43,6 @@ function App() {
   return (
     <>
       <Mobile>
-        <p>모바일</p>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -55,7 +55,6 @@ function App() {
       </Mobile>
 
       <PC>
-        <p>PC</p>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />

@@ -1,33 +1,35 @@
-.Gaon {
-  text-align: center;
+/* Gaon.css */
+.gaon-container {
+    margin: 0;
+    display: flex;
+    background: url(../image/가온제\ 배경.png) repeat top  center;
+    flex-direction: column;
+    background-size: contain; /* Ensures the image covers the entire container */
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Ensures the container fills the viewport height */
 }
 
-.Homebtn {
-  text-align: center;
-  width: 500px;
-  height: 100px;
+.gaon-title {
+  font-size: 100px;
+  color: #000;
+  margin: 20px 0 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gaon-subtitle {
+  font-size: 24px;
+  color: #555;
+  margin: 5px 0;
 }
 
-.Homemenu {
+.gaon-description {
+  font-size: 30px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.title-image {
+  width: 350px; /* 이미지 너비 설정 */
+  margin: 0 center; /* 가운데 정렬 */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
