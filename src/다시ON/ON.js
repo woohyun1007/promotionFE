@@ -23,6 +23,13 @@ function ON() {
   const [thoughts, setThoughts] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
+  function moveMenu1() {
+    navigate("/Gaon");
+  }
+  function moveMenu2() {
+    navigate("/EUM");
+  }
+
   // Function to clear all input fields
   const handleClear = () => {
     swal("정말 내용을 지우시겠습니까?", {
@@ -157,10 +164,10 @@ function ON() {
             당신의 소원을 이뤄보세요!
           </Typography>
           <Box sx={{ mt: 1, display: 'flex', gap: 1, flexDirection: 'column' }}>
-            <Button size='md' variant="outlined" color="success" onClick={() => setOpen(false)}>
+            <Button size='md' variant="outlined" color="success" onClick={moveMenu1}>
               가온제 소개
             </Button>
-            <Button size='md' variant="outlined" color="success" onClick={() => setOpen(false)}>
+            <Button size='md' variant="outlined" color="success" onClick={moveMenu2}>
               E:UM 소개
             </Button>
           </Box>
