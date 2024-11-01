@@ -1,18 +1,12 @@
 /* App.css */
 .container {
-    background-image: url('../image/무제-1_대지.png');
-    background-size: contain; /* 이미지 전체가 보이도록 설정 */
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+  margin: 0;
+  display: flex;  
+  background: url(../image/가온제\ 배경.png) no-repeat top center;
+  flex-direction: column;  
+  background-size: contain;
+  align-items: center;  
+  width: 100%;
   }
   
   
@@ -67,4 +61,32 @@
     width: 350px;
     display: flex;
     margin: center;
+  }
+  .intro-image {
+    width: 600px;
+    display: flex;
+    margin: center;
+  }
+  .swal-modal {
+    font-family: 'DungGeunMo'; 
+    font-size: 21px; 
+}
+
+  .swal-button {
+    font-family: 'DungGeunMo';
+    font-size: 16px; 
+
+}
+  @font-face {
+    font-family: 'Yoonwoo';
+    src: url('/src/fonts/Yoonwoo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'DungGeunMo';
+    src: url('/src/fonts/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
   }

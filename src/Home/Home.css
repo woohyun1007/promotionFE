@@ -1,32 +1,40 @@
-.Home {
-  text-align: center;
+/* Home.css */
+.body {  
+  margin: 0;
+  display: flex;  
+  background: url(../image/가온제\ 배경.png) no-repeat top center;
+  flex-direction: column;  
+  background-size: contain;
+  align-items: center;  
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title-image {  
+  width: 350px;  
+  margin: 30px auto;
 }
 
-.Homebtn {
-  text-align: center;
-  width: 500px;
-  height: 100px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.Homemenu {
+.intro-image {
+  width: 600px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* Button icon styling */
+.button-image1 {  
+  cursor: pointer;
+  width: 40%;
+}
+.button-image2 {  
+  cursor: pointer;
+  width: 40%; /* Ensure the icon fills the button width */
+}
+.button-image3 {  
+  cursor: pointer;
+  width: 40%; /* Ensure the icon fills the button width */
 }

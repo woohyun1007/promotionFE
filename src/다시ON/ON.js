@@ -6,17 +6,24 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import Modal from '@mui/joy/Modal';
+import { useNavigate } from 'react-router-dom';
 import ModalDialog from '@mui/joy/ModalDialog';
 import Typography from '@mui/joy/Typography';
 import swal from 'sweetalert';
 import './ON.css';
 
+
 // 이미지 파일 불러오기 (src 폴더 내 img 폴더에 위치시켜야 합니다)
 import slogan from '../image/2024 가온제 우리가 바라던~.png';
-import logo from '../image/2024 가온제 로고+문구_대지 1.png';
-import backgroundImage from '../image/무제-1_대지.png'; // 배경 이미지 가져오기
+import logo from '../image/2024 가온제 로고.png';
+import intro from '../image/가온제 다시,ON페이지 소개글.png';
 
 function ON() {
+  const navigate = useNavigate();
+  
+  const moveMenu2 = () => navigate("/Gaon");
+  const moveMenu3 = () => navigate("/EUM");
+
   const [name, setName] = React.useState('');
   const [sNumber, setsNumber] = React.useState('');
   const [wish, setWish] = React.useState('');
@@ -38,28 +45,50 @@ function ON() {
   };
 
   // Function to handle the modal open
-  const handleSend = () => {
-    if (name && sNumber && wish && thoughts) {
-      setOpen(true);
-    } else {
-      swal("Oops", "모든 칸에 입력해주세요", "error");
-    }
-  };
+  // Function to handle form submission
+// const handleSend = () => {
+//   if (name && sNumber && wish && thoughts) {
+//     // Send data to the backend
+//     fetch('/api/wishes', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({
+//         name,
+//         sNumber,
+//         wish,
+//         thoughts,
+//       }),
+//     })
+//       .then((response) => {
+//         if (response.ok) {
+//           setOpen(true); // Open the modal on successful submission
+//         } else {
+//           swal("Error", "소원을 저장하는 중 문제가 발생했습니다.", "error");
+//         }
+//       })
+//       .catch((error) => {
+//         console.error("Error saving wish:", error);
+//         swal("Error", "서버 오류가 발생했습니다.", "error");
+//       });
+//   } else {
+//     swal("Oops", "모든 칸에 입력해주세요", "error");
+//   }
+// };
+const handleSend = () => {
+  if (name && sNumber && wish && thoughts) {
+    setOpen(true);
+  } else {
+    swal("Oops", "모든 칸에 입력해주세요", "error");
+  }
+};
+
 
   return (
     <div
       className="container"
-      style={{
-        backgroundImage: `url(${backgroundImage})`, // 배경 이미지 설정
-        backgroundSize: 'cover', // 배경 이미지가 컨테이너를 덮도록 설정
-        backgroundRepeat: 'no-repeat', // 이미지 반복 방지
-        backgroundPosition: 'center', // 중앙에 이미지 배치
-        height: '100vh', // 전체 화면 높이 설정
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center', // 세로축 중앙 정렬
-        alignItems: 'center', // 가로축 중앙 정렬
-      }}
+   
     >
       {/* Top Center Text */}
       <img src={slogan} alt="Slogan" className="slogan-image" />
@@ -68,46 +97,59 @@ function ON() {
       <img src={logo} alt="Title Logo" className="title-image" />
        <p></p>
       {/* Subtext */}
-      <p className="small-text">강원대 미컴과에 들어오면서 꿨던 꿈을 다시 생각해봅시다...</p>
-
+      <img src={intro} alt="Intro" className='intro-image'/>
       {/* Input Forms */}
       <div className="form-container">
         {/* Name and Student Number Input */}
         <Box sx={{ display: 'flex', gap: 2, marginBottom: 2 }}>
-          <Box sx={{ flex: 1 ,backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
+          <Box sx={{ flex: 1 ,backgroundColor: 'rgba(249, 242, 220, 1)'}}>
             <TextField
               label="학번"
-              multiline
               type='text'
               rows={1}
               value={sNumber}
               onChange={(e) => {
                 const value = e.target.value;
                 if (!/^\d*$/.test(value)) {
-                  swal("Oops", "숫자만 입력 가능합니다.", "error");
+                  swal("Oops", "숫자만 입력 가능합니다.", "error",{
+                     className: "swal-modal"
+                  });
                 } else if (value.length > 9) {
-                  swal("Oops", "학번을 다시 입력해주세요.", "error");
+                  swal("Oops", "학번을 다시 입력해주세요.", "error",{
+                    className: "swal-modal"
+                 });
                 } else {  
                   setsNumber(value);
                 }
               }}
               fullWidth
+              InputLabelProps={{
+                style: { fontFamily: "DungGeunMo" }, // lable폰트
+              }}
+              InputProps={{
+                style: { fontSize:"21px" ,fontFamily: "Yoonwoo" }  //입력폼 폰트
+              }}
             />
           </Box>
-          <Box sx={{ flex: 1, backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
+          <Box sx={{ flex: 1, backgroundColor: 'rgba(247, 237, 205, 1)'}}>
             <TextField
               label="소원 작성자 이름"
-              multiline
               rows={1}
               value={name}
               onChange={(e) => setName(e.target.value)}
               fullWidth
+              InputLabelProps={{
+                style: { fontFamily: "DungGeunMo" }, // lable폰트
+              }}
+              InputProps={{
+                style: { fontSize:"21px" ,fontFamily: "Yoonwoo" }  //입력폼 폰트
+              }}
             />
           </Box>
         </Box>
 
         {/* Wish Input */}
-        <Box sx={{ marginBottom: 2 ,backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
+        <Box sx={{ marginBottom: 2 ,backgroundColor: 'rgba(249, 242, 220, 1)'}}>
           <TextField
             label="소원을 작성해주세요"
             multiline
@@ -115,11 +157,17 @@ function ON() {
             value={wish}
             onChange={(e) => setWish(e.target.value)}
             fullWidth
+            InputLabelProps={{
+              style: { fontFamily: "DungGeunMo" }, // lable폰트
+            }}
+            InputProps={{
+              style: { fontSize:"21px" ,fontFamily: "Yoonwoo" }  //입력폼 폰트
+            }}
           />
         </Box>
 
         {/* Thoughts Input */}
-        <Box sx={{ marginBottom: 2 , backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
+        <Box sx={{ marginBottom: 2 , backgroundColor: 'rgba(249, 242, 220, 1)'}}>
           <TextField
             label="당신에게 미디어커뮤니케이션학과란?"
             multiline
@@ -127,15 +175,22 @@ function ON() {
             value={thoughts}
             onChange={(e) => setThoughts(e.target.value)}
             fullWidth
+            InputLabelProps={{
+              style: { fontFamily: "DungGeunMo" }, // lable폰트
+            }}
+            InputProps={{
+              style: { fontSize:"21px" ,fontFamily: "Yoonwoo" }  //입력폼 폰트
+            }}
           />
         </Box>
 
         {/* Action Buttons */}
         <Stack direction="row" spacing={2}>
-          <Button variant="contained" startIcon={<SendIcon />} onClick={handleSend}>
+          <Button  sx={{ fontFamily: 'DungGeunMo' }} variant="contained" startIcon={<SendIcon />} onClick={handleSend}>
             소원 보내기
           </Button>
-          <Button variant="outlined" startIcon={<DeleteIcon />} onClick={handleClear}>
+
+          <Button sx={{ fontFamily: 'DungGeunMo' }} variant="outlined" startIcon={<DeleteIcon />} onClick={handleClear}>
             내용 지우기
           </Button>
         </Stack>
@@ -143,24 +198,26 @@ function ON() {
 
       {/* Modal for Wish Submission */}
       <Modal open={open} onClose={() => setOpen(false)} sx={{ bgcolor: 'rgba(0, 0, 0, 0.5)', textAlign: 'center' }}>
-        <ModalDialog aria-labelledby="nested-modal-title" aria-describedby="nested-modal-description">
-          <Typography id="nested-modal-title" level="h2">
+        <ModalDialog aria-labelledby="nested-modal-title" 
+                     aria-describedby="nested-modal-description"
+                     sx={{ width: '500px', height: '350px', maxWidth: '90%', maxHeight: '90%', padding: 3 }}>
+          <Typography fontFamily="Yoonwoo" fontSize="30px" id="nested-modal-title" level="h2">
             감사합니다!
           </Typography>
-          <Typography id="nested-modal-description" textColor="text.tertiary">
+          <Typography fontFamily="Yoonwoo" fontSize="22px" id="nested-modal-description" textColor="text.tertiary">
             11월 28일
           </Typography>
-          <Typography id="nested-modal-description" textColor="text.tertiary">
+          <Typography fontFamily="Yoonwoo" fontSize="22px" id="nested-modal-description" textColor="text.tertiary">
             다시,ON에서
           </Typography>
-          <Typography id="nested-modal-description" textColor="text.tertiary">
+          <Typography fontFamily="Yoonwoo" fontSize="22px" id="nested-modal-description" textColor="text.tertiary">
             당신의 소원을 이뤄보세요!
           </Typography>
           <Box sx={{ mt: 1, display: 'flex', gap: 1, flexDirection: 'column' }}>
-            <Button size='md' variant="outlined" color="success" onClick={() => setOpen(false)}>
+            <Button size='md' variant="outlined" color="success"  onClick={moveMenu2}>
               가온제 소개
             </Button>
-            <Button size='md' variant="outlined" color="success" onClick={() => setOpen(false)}>
+            <Button size='md' variant="outlined" color="success" onClick={moveMenu3}>
               E:UM 소개
             </Button>
           </Box>
