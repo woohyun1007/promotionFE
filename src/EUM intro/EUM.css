@@ -1,56 +1,62 @@
-.eum-container{
-  margin: 0;
-  display: flex;  
-  background: url(../image/가온제\ 긴배경.png) no-repeat top center;
-  flex-direction: column;  
-  background-size: contain;
-  align-items: center;  
-  width: 100%;
-}
+    .eum-container{
+    margin: 0;
+    display: flex;  
+    background: url(../image/2024gaon_Lback.png) repeat ;
+    flex-direction: column;  
+    background-size: contain;
+    align-items: center;  
+    width: 100%;
+    overflow: hidden; /* 스크롤 방지 */
 
-.slogan-image {
-  width: 350px;
-  margin: 20px auto;
-}
 
-.eum-image {
-  width: 350px;
-  margin: 20px auto;
-}
+  }
 
-.eum-description {
-  font-size: 24px;
-  color: #333;
-  margin: 20px 0;
-}
+  .slogan-image {
+    width: 350px;
+    margin: 20px auto;
+  }
 
-/* Separate classes for each image */
-.eum-image-1 {
-  width: 100%;
-  max-width: 100%;
-  margin: 15px 0;
-}
+  .eum-image {
+    width: 350px;
+    margin:  20px auto;
+  }
 
-.eum-image-2 {
-  width: 100%;
-  max-width: 100%;
-  margin: 15px 0;
-}
+  .eum-image {
+    width: 50%;
+    display: flex;        /* Enables flexbox */
+    flex-direction: column;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center;     /* Centers items vertically */
+          /* Centers the image container itself if it's a block element */
+  }
 
-.eum-image-3 {
-  width: 100%;
-  max-width: 100%;
-  margin: 15px 0;
-}
+  /* Separate classes for each image */
+  .eum-image-1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+  }
 
-.eum-image-4 {
-  width: 100%;
-  max-width: 100%;
-  margin: 15px 0;
-}
+  .eum-image-2 {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+  }
 
-.eum-image-5 {
-  width: 100%;
-  max-width: 100%;
-  margin: 15px 0;
-}
+  .eum-image-3 {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  .eum-image-4 {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  .eum-image-5 {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+  }
