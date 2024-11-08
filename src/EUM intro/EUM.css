@@ -1,7 +1,7 @@
 .eum-container{
   margin: 0;
   display: flex;  
-  background: url(../image/가온제\ 긴배경.png) no-repeat top center;
+  background: url(../image/가온제\ 긴배경.png) no-repeat top center;
   flex-direction: column;  
   background-size: contain;
   align-items: center;  

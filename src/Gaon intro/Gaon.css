@@ -2,7 +2,7 @@
 .gaon-container {
     margin: 0;
     display: flex;
-    background: url(../image/가온제\ 배경.png) repeat top  center;
+    background: url(../image/가온제\ 배경.png) repeat top  center;
     flex-direction: column;
     background-size: contain; /* Ensures the image covers the entire container */
     align-items: center;

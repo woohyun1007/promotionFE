@@ -2,8 +2,8 @@
 import "./Home.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../image/2024 가온제 로고.png"; // Example logo
-import slogan from '../image/2024 가온제 우리가 바라던~.png'; //slogan
+import logo from "../image/2024 가온제 로고.png"; // Example logo
+import slogan from "../image/2024 가온제 우리가 바라던~.png"; //slogan
 import intro from '../image/가온제 메인페이지 소개글.png';
 
 
