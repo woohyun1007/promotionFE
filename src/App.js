@@ -26,14 +26,11 @@ export const PC = ({ children }) => {
 };
 
 function App() {
-  const [hello, setHello] = useState("");
-
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/test")
       .then((res) => {
         console.log(res);
-        setHello(res.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -50,7 +47,6 @@ function App() {
             <Route path="/EUM" element={<EUM />} />
             <Route path="/ON" element={<ON />} />
           </Routes>
-          <p>백:{hello}</p>
         </BrowserRouter>
       </Mobile>
 
@@ -62,7 +58,6 @@ function App() {
             <Route path="/EUM" element={<EUM />} />
             <Route path="/ON" element={<ON />} />
           </Routes>
-          <p>백:{hello}</p>
         </BrowserRouter>
       </PC>
     </>

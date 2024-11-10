@@ -19,14 +19,13 @@ function EUM() {
     <div
       className="eum-container">
        
-
       {/* Title and Subtitle */}
       <img src={slogan} alt="Slogan" className="slogan-image" />
       <p></p>
       {/* Logo Image */}
       <img src={logo} alt="EUM Event" className="eum-image" />
       
-      <div
+      <motion.div
             initial={{ opacity: 0, y: 10,x: 50 }}
             whileInView={{ opacity: 1, y: 0, x: 0 }}
             viewport={{ once: false }}
@@ -100,10 +99,6 @@ function EUM() {
             }}>
              <img src={eum5} alt="EUM 5" className="eum-sub-image eum-image-5" />
              </motion.div>
-
-        
-
- 
       </div>
     
   );
