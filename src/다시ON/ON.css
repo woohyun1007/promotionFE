@@ -52,8 +52,7 @@
     margin: center;
   }
   .intro-image {
-    margin-top: 50px;
-    margin-bottom: 200px;
+    margin-top: 50px; 
     width: 95%;
     display: flex;
     margin: center;

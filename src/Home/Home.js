@@ -11,6 +11,7 @@ import intro from '../image/2024gaon_Mainscript.png';
 import onIcon from "../image/2024gaon_button1.png"; // Replace with your actual image paths
 import gaonIcon from "../image/2024gaon_button2.png";
 import eumIcon from "../image/2024gaon_button3.png";
+import dday from "../image/2024gaon d-day.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -31,6 +32,8 @@ function Home() {
 
       {/* Subtitle */}
       <img src={intro} alt="Intro" className="intro-image" />
+
+      <img src={dday} alt="Dday" className="dday-image"/>
 
 
       {/* Navigation Buttons */}
