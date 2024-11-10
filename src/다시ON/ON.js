@@ -95,7 +95,7 @@ function ON() {
       console.log("데이터 ", {id, name, wish, thoughts});
       try {
         const res = await axios.post(
-          "http://localhost:8080/api/test", {
+          "http://34.64.202.47:8080/api/test", {
           id: id,
           name: name,
           wish: wish,

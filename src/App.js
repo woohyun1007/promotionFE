@@ -5,7 +5,7 @@ import EUM from "./EUM intro/EUM";
 import ON from "./다시ON/ON";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "./lib/axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
 
