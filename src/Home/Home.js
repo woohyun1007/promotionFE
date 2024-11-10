@@ -2,15 +2,16 @@
 import "./Home.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../image/2024 가온제 로고.png"; // Example logo
-import slogan from "../image/2024 가온제 우리가 바라던~.png"; //slogan
-import intro from '../image/가온제 메인페이지 소개글.png';
+import logo from "../image/2024gaon_logo.png"; // Example logo
+import slogan from '../image/2024gaon_slogan.png'; //slogan
+import intro from '../image/2024gaon_Mainscript.png';
 
 
 // Import images for the buttons
-import onIcon from "../image/다시on 버튼_대지 1.png"; // Replace with your actual image paths
-import gaonIcon from "../image/가온제 소개 버튼-02.png";
-import eumIcon from "../image/이음 소개 버튼-03.png";
+import onIcon from "../image/2024gaon_button1.png"; // Replace with your actual image paths
+import gaonIcon from "../image/2024gaon_button2.png";
+import eumIcon from "../image/2024gaon_button3.png";
+import dday from "../image/2024gaon d-day.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -31,6 +32,8 @@ function Home() {
 
       {/* Subtitle */}
       <img src={intro} alt="Intro" className="intro-image" />
+
+      <img src={dday} alt="Dday" className="dday-image"/>
 
 
       {/* Navigation Buttons */}

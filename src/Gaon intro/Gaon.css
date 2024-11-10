@@ -1,13 +1,12 @@
 /* Gaon.css */
 .gaon-container {
-    margin: 0;
-    display: flex;
-    background: url(../image/가온제\ 배경.png) repeat top  center;
-    flex-direction: column;
-    background-size: contain; /* Ensures the image covers the entire container */
-    align-items: center;
-    width: 100%;
-    min-height: 100vh; /* Ensures the container fills the viewport height */
+  margin: 0;
+  display: flex;  
+  background: url(../image/2024gaon_Lback.png) repeat ;
+  flex-direction: column;  
+  background-size: cover;
+  align-items: center;  
+  width: 100%;
 }
 
 .gaon-title {
@@ -20,6 +19,18 @@
   font-size: 24px;
   color: #555;
   margin: 5px 0;
+}
+.intro-image {
+  width: 600px;
+  display: flex;
+  margin: center;
+}
+.procedure-image{
+  margin-top: 50px;
+  width: 550px;
+
+  display: flex;
+  margin: center;
 }
 
 .gaon-description {

@@ -2,30 +2,19 @@
 .container {
   margin: 0;
   display: flex;  
-  background: url(../image/가온제\ 배경.png) no-repeat top center;
+  background: url(../image/2024gaon_Lback.png) repeat ;
   flex-direction: column;  
-  background-size: contain;
+  background-size: cover;
   align-items: center;  
   width: 100%;
   }
   
-  
-  .small-text {
-    font-size: 10px;
-    margin: 5px 0;
-    color: #333;
-  }
-  
-  .title {
-    font-size: 24px;
-    margin: 10px 0;
-    color: #000;
-  }
-  
   .form-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     margin-top: 20px;
+    margin: center;
+    margin-right: 180px;
     
   }
   
@@ -53,29 +42,42 @@
     border: 1px solid #ddd;
   }
   .title-image {
-    width: 350px; /* 이미지 너비 설정 */
+    width: 600px; /* 이미지 너비 설정 */
     margin: 0 center; /* 가운데 정렬 */
     display: flex;
   }
   .slogan-image {
-    width: 350px;
+    width: 500px;
     display: flex;
     margin: center;
   }
   .intro-image {
-    width: 600px;
+    margin-top: 50px; 
+    width: 95%;
     display: flex;
     margin: center;
+    
   }
-  .swal-modal {
+  .swal-modal,
+  .Swal-modal {
     font-family: 'DungGeunMo'; 
-    font-size: 21px; 
+    font-size: 27px; 
+}
+  .swal-button,
+  .Swal-modal {
+    font-family: 'DungGeunMo';
+    font-size: 25px; 
+
+}
+.button{
+  margin-bottom: 300px;
+}
+.colored-toast.swal2-icon-success {
+  background-color: #a5dc86 !important;
 }
 
-  .swal-button {
-    font-family: 'DungGeunMo';
-    font-size: 16px; 
-
+.colored-toast.swal2-icon-error {
+  background-color: #f27474 !important;
 }
   @font-face {
     font-family: 'Yoonwoo';

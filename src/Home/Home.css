@@ -2,11 +2,13 @@
 .body {  
   margin: 0;
   display: flex;  
-  background: url(../image/가온제\ 배경.png) no-repeat top center;
+  background: url(../image/2024gaon_Lback.png) repeat ;
   flex-direction: column;  
-  background-size: contain;
+  background-size: cover;
   align-items: center;  
   width: 100%;
+  overflow: hidden; /* 스크롤 방지 */
+  
 }
 * {
   margin: 0;
@@ -14,27 +16,40 @@
   box-sizing: border-box;
 }
 .title-image {  
-  width: 350px;  
+  width: 500px;  
   margin: 30px auto;
+  margin-top: 100px;
 }
-
-.intro-image {
-  width: 600px;
+.slogan-image {
+  margin-top: 30px;
+  width: 500px;
   display: flex;
   margin: center;
+}
+.intro-image {
+  width: 900px;
+  display: flex;
+  margin: center;
+}
+.dday-image{
+  width: 80%;
 }
 
 
 /* Button icon styling */
 .button-image1 {  
+  margin-top: 100px;
   cursor: pointer;
-  width: 40%;
+  width: 45%;
 }
 .button-image2 {  
+  margin-top: 100px;
   cursor: pointer;
-  width: 40%; /* Ensure the icon fills the button width */
+  width: 45%; /* Ensure the icon fills the button width */
 }
 .button-image3 {  
+  margin-top: 100px;
   cursor: pointer;
-  width: 40%; /* Ensure the icon fills the button width */
+  width: 45%; /* Ensure the icon fills the button width */
+  margin-bottom: 125px;
 }
