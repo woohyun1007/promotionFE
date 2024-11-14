@@ -30,7 +30,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/test")
+      .get("http://34.64.202.47/api/test")
       .then((res) => {
         console.log(res);
         setHello(res.data);
@@ -40,7 +40,8 @@ function App() {
       });
   }, []);
 
-  return (
+  return ( 
+
     <>
       <Mobile>
         <BrowserRouter>
